@@ -1,0 +1,142 @@
+{
+  "header": {
+    "title": "🏝️ Khám Phá Tuần Châu",
+    "subtitle": "Hòn đảo du lịch đẳng cấp bậc nhất Việt Nam"
+  },
+  "video": {
+    "title": "🎬 Video Giới Thiệu Tuần Châu",
+    "url": "https://www.youtube.com/embed/XToMcabQ5bc?autoplay=0&mute=0",
+    "description": [
+      "Đảo Tuần Châu là một trong những điểm đến du lịch hấp dẫn nhất tại Việt Nam. Với vẻ đẹp thiên nhiên tuyệt vời kết hợp cùng hệ thống dịch vụ du lịch đẳng cấp quốc tế, Tuần Châu hứa hẹn mang đến cho du khách những trải nghiệm khó quên. Hãy cùng xem video để khám phá vẻ đẹp của \"Viên ngọc Vịnh Hạ Long\" này!",
+      "Từ bãi biển cát trắng mịn, công viên nước hiện đại, sân golf đẳng cấp cho đến các show diễn nghệ thuật đỉnh cao - tất cả đều sẵn sàng đón chào bạn tại Tuần Châu."
+    ]
+  },
+  "mainContent": {
+    "title": "Đảo Tuần Châu - Viên Ngọc Của Vịnh Hạ Long",
+    "introduction": "Đảo Tuần Châu là một hòn đảo nằm ở phía nam vịnh Hạ Long, thuộc phường Tuần Châu, thành phố Hạ Long, tỉnh Quảng Ninh. Với diện tích khoảng 220 hecta, Tuần Châu được mệnh danh là \"Hòn ngọc của Vịnh Hạ Long\" và là khu du lịch sinh thái biển đẳng cấp quốc tế đầu tiên tại Việt Nam.",
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500",
+        "alt": "Tuần Châu 1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=500",
+        "alt": "Tuần Châu 2"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1528127269322-539801943592?w=500",
+        "alt": "Tuần Châu 3"
+      }
+    ],
+    "highlights": {
+      "title": "🌟 Điểm Nổi Bật",
+      "items": [
+        "Công viên nước Typhoon Water Park hiện đại",
+        "Sân golf đẳng cấp quốc tế",
+        "Bãi tắm nhân tạo đẹp nhất Quảng Ninh",
+        "Rạp xiếc động vật độc đáo",
+        "Hệ thống khách sạn 5 sao sang trọng",
+        "Các show diễn nghệ thuật đỉnh cao"
+      ]
+    },
+    "sections": [
+      {
+        "icon": "📍",
+        "title": "Vị Trí Địa Lý",
+        "content": "Đảo Tuần Châu cách trung tâm thành phố Hạ Long khoảng 2km về phía Tây, được nối liền với đất liền bằng một cây cầu dài 1.200m. Vị trí thuận lợi này giúp du khách dễ dàng di chuyển từ trung tâm thành phố ra đảo chỉ trong vài phút."
+      },
+      {
+        "icon": "🎯",
+        "title": "Hoạt Động Du Lịch",
+        "content": [
+          {
+            "subtitle": "Tắm biển và thể thao nước:",
+            "text": "Bãi tắm Tuần Châu có bờ cát trắng mịn, nước trong xanh với đầy đủ tiện nghi phục vụ du khách. Bạn có thể tham gia các hoạt động như lướt ván, mô tô nước, dù bay, kayak..."
+          },
+          {
+            "subtitle": "Công viên nước Typhoon:",
+            "text": "Là công viên nước đầu tiên tại miền Bắc với hơn 20 trò chơi cảm giác mạnh, phù hợp cho mọi lứa tuổi. Các trò chơi nổi bật như Super Bowl, Black Hole, Lazy River, sóng nhân tạo..."
+          },
+          {
+            "subtitle": "Sân golf FLC Hạ Long:",
+            "text": "Sân golf 36 lỗ đẳng cấp quốc tế, được thiết kế bởi tay golf huyền thoại Nicklaus Design, có view nhìn ra vịnh Hạ Long tuyệt đẹp."
+          },
+          {
+            "subtitle": "Rạp xiếc và Show diễn:",
+            "text": "Rạp xiếc Tuần Châu với các tiết mục xiếc động vật độc đáo, kết hợp với show nhạc nước và các buổi biểu diễn nghệ thuật quy mô lớn."
+          }
+        ]
+      },
+      {
+        "icon": "🍽️",
+        "title": "Ẩm Thực",
+        "content": "Tại Tuần Châu, du khách có thể thưởng thức các món hải sản tươi sống được đánh bắt trực tiếp từ vùng biển Quảng Ninh. Các nhà hàng từ bình dân đến cao cấp đều phục vụ đa dạng món ăn từ Á đến Âu, đặc biệt là các món đặc sản địa phương như: chả mực, nghêu hấp xả, sò điệp nướng mỡ hành, cua hấp bia..."
+      },
+      {
+        "icon": "🏨",
+        "title": "Nơi Lưu Trú",
+        "content": "Đảo Tuần Châu có hệ thống khách sạn, resort đa dạng từ 3 sao đến 5 sao như FLC Luxury Hotel Hạ Long, TTC Hotel Premium, Holiday Villa... Tất cả đều được trang bị hiện đại, sang trọng với view nhìn ra biển tuyệt đẹp."
+      },
+      {
+        "icon": "💡",
+        "title": "Thông Tin Hữu Ích",
+        "content": [
+          {
+            "label": "Thời gian lý tưởng:",
+            "text": "Từ tháng 4 đến tháng 10, thời tiết mát mẻ, ít mưa, thích hợp cho các hoạt động ngoài trời."
+          },
+          {
+            "label": "Giá vé tham quan:",
+            "text": "Miễn phí vào đảo, chỉ tính phí các dịch vụ giải trí cụ thể."
+          },
+          {
+            "label": "Đi lại:",
+            "text": "Có thể đi taxi, xe bus, hoặc thuê xe máy từ trung tâm Hạ Long."
+          }
+        ]
+      }
+    ]
+  },
+  "sidebar": {
+    "facebook": {
+      "title": "📰 Bài Viết Liên Quan",
+      "pageUrl": "https://www.facebook.com/QuangNinhTourism",
+      "note": "💬 Theo dõi fanpage Du lịch Quảng Ninh để cập nhật thông tin mới nhất"
+    },
+    "map": {
+      "title": "🗺️ Vị Trí - UBND Phường Tuần Châu",
+      "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.3925789363756!2d107.04619931493756!3d20.867446494975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a58e6bb23cde7%3A0x8d6e8e3e9e8c8d8e!2zVUJORCBQaMaw4budbmcgVHXhuqduIENow6J1!5e0!3m2!1svi!2s!4v1234567890123!5m2!1svi!2s",
+      "address": "📍 Địa chỉ: Phường Tuần Châu, TP. Hạ Long, Quảng Ninh"
+    },
+    "quickInfo": {
+      "title": "⚡ Thông Tin Nhanh",
+      "items": [
+        {
+          "icon": "☎️",
+          "label": "Hotline:",
+          "value": "1900-xxxx"
+        },
+        {
+          "icon": "🕐",
+          "label": "Giờ mở cửa:",
+          "value": "24/7"
+        },
+        {
+          "icon": "💰",
+          "label": "Giá vé:",
+          "value": "Miễn phí vào đảo"
+        },
+        {
+          "icon": "🚗",
+          "label": "Cách trung tâm:",
+          "value": "2km"
+        },
+        {
+          "icon": "⭐",
+          "label": "Đánh giá:",
+          "value": "4.5/5 ⭐⭐⭐⭐"
+        }
+      ]
+    }
+  }
+}

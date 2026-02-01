@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch Tuần Châu | Quảng Ninh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Container với Video bên trái trên cùng */
+        .container {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Video Section - Góc trên bên trái */
+        .video-section {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .video-wrapper {
+            width: 500px;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 281px;
+            border: none;
+            display: block;
+        }
+
+        .video-title {
+            background: #667eea;
+            color: white;
+            padding: 12px 15px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+            clear: both;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .main-content h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .main-content h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .main-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.05em;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-section h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        /* Facebook Plugin */
+        .fb-plugin {
+            height: 500px;
+            overflow: hidden;
+        }
+
+        /* Google Map */
+        .map-container {
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Highlights */
+        .highlights {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .highlights h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .highlights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .highlights li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .highlights li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-wrapper {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .video-wrapper {
+                width: 100%;
+            }
+
+            .video-wrapper iframe {
+                height: 200px;
+            }
+        }
+
+        /* Loading effect for Facebook */
+        .fb-loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>🏝️ Khám Phá Tuần Châu</h1>
+            <p>Hòn đảo du lịch đẳng cấp bậc nhất Việt Nam</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Video Section - Góc trên bên trái -->
+        <div class="video-section clearfix">
+            <div class="video-wrapper">
+                <div class="video-title">
+                    🎬 Video Giới Thiệu Tuần Châu
+                </div>
+                <iframe 
+                    src="https://www.youtube.com/embed/XToMcabQ5bc?autoplay=0&mute=0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <!-- Text bên cạnh video -->
+            <div style="overflow: hidden;">
+                <h2 style="color: #667eea; font-size: 1.8em; margin-bottom: 15px;">
+                    Chào Mừng Đến Với Tuần Châu
+                </h2>
+                <p style="font-size: 1.05em; line-height: 1.8; text-align: justify;">
+                    Đảo Tuần Châu là một trong những điểm đến du lịch hấp dẫn nhất tại Việt Nam. 
+                    Với vẻ đẹp thiên nhiên tuyệt vời kết hợp cùng hệ thống dịch vụ du lịch đẳng cấp quốc tế, 
+                    Tuần Châu hứa hẹn mang đến cho du khách những trải nghiệm khó quên. Hãy cùng xem video 
+                    để khám phá vẻ đẹp của "Viên ngọc Vịnh Hạ Long" này!
+                </p>
+                <p style="font-size: 1.05em; line-height: 1.8; text-align: justify; margin-top: 10px;">
+                    Từ bãi biển cát trắng mịn, công viên nước hiện đại, sân golf đẳng cấp cho đến các 
+                    show diễn nghệ thuật đỉnh cao - tất cả đều sẵn sàng đón chào bạn tại Tuần Châu.
+                </p>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Main Content -->
+            <main class="main-content">
+                <h2>Đảo Tuần Châu - Viên Ngọc Của Vịnh Hạ Long</h2>
+                
+                <p>
+                    Đảo Tuần Châu là một hòn đảo nằm ở phía nam vịnh Hạ Long, thuộc phường Tuần Châu, 
+                    thành phố Hạ Long, tỉnh Quảng Ninh. Với diện tích khoảng 220 hecta, Tuần Châu được 
+                    mệnh danh là "Hòn ngọc của Vịnh Hạ Long" và là khu du lịch sinh thái biển đẳng cấp 
+                    quốc tế đầu tiên tại Việt Nam.
+                </p>
+
+                <div class="image-gallery">
+                    <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500" alt="Tuần Châu 1">
+                    <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=500" alt="Tuần Châu 2">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=500" alt="Tuần Châu 3">
+                </div>
+
+                <div class="highlights">
+                    <h3>🌟 Điểm Nổi Bật</h3>
+                    <ul>
+                        <li>Công viên nước Typhoon Water Park hiện đại</li>
+                        <li>Sân golf đẳng cấp quốc tế</li>
+                        <li>Bãi tắm nhân tạo đẹp nhất Quảng Ninh</li>
+                        <li>Rạp xiếc động vật độc đáo</li>
+                        <li>Hệ thống khách sạn 5 sao sang trọng</li>
+                        <li>Các show diễn nghệ thuật đỉnh cao</li>
+                    </ul>
+                </div>
+
+                <h3>📍 Vị Trí Địa Lý</h3>
+                <p>
+                    Đảo Tuần Châu cách trung tâm thành phố Hạ Long khoảng 2km về phía Tây, được nối 
+                    liền với đất liền bằng một cây cầu dài 1.200m. Vị trí thuận lợi này giúp du khách 
+                    dễ dàng di chuyển từ trung tâm thành phố ra đảo chỉ trong vài phút.
+                </p>
+
+                <h3>🎯 Hoạt Động Du Lịch</h3>
+                <p>
+                    <strong>Tắm biển và thể thao nước:</strong> Bãi tắm Tuần Châu có bờ cát trắng mịn, 
+                    nước trong xanh với đầy đủ tiện nghi phục vụ du khách. Bạn có thể tham gia các 
+                    hoạt động như lướt ván, mô tô nước, dù bay, kayak...
+                </p>
+
+                <p>
+                    <strong>Công viên nước Typhoon:</strong> Là công viên nước đầu tiên tại miền Bắc 
+                    với hơn 20 trò chơi cảm giác mạnh, phù hợp cho mọi lứa tuổi. Các trò chơi nổi bật 
+                    như Super Bowl, Black Hole, Lazy River, sóng nhân tạo...
+                </p>
+
+                <p>
+                    <strong>Sân golf FLC Hạ Long:</strong> Sân golf 36 lỗ đẳng cấp quốc tế, được thiết 
+                    kế bởi tay golf huyền thoại Nicklaus Design, có view nhìn ra vịnh Hạ Long tuyệt đẹp.
+                </p>
+
+                <p>
+                    <strong>Rạp xiếc và Show diễn:</strong> Rạp xiếc Tuần Châu với các tiết mục xiếc 
+                    động vật độc đáo, kết hợp với show nhạc nước và các buổi biểu diễn nghệ thuật quy mô lớn.
+                </p>
+
+                <h3>🍽️ Ẩm Thực</h3>
+                <p>
+                    Tại Tuần Châu, du khách có thể thưởng thức các món hải sản tươi sống được đánh bắt 
+                    trực tiếp từ vùng biển Quảng Ninh. Các nhà hàng từ bình dân đến cao cấp đều phục vụ 
+                    đa dạng món ăn từ Á đến Âu, đặc biệt là các món đặc sản địa phương như: chả mực, 
+                    nghêu hấp xả, sò điệp nướng mỡ hành, cua hấp bia...
+                </p>
+
+                <h3>🏨 Nơi Lưu Trú</h3>
+                <p>
+                    Đảo Tuần Châu có hệ thống khách sạn, resort đa dạng từ 3 sao đến 5 sao như FLC 
+                    Luxury Hotel Hạ Long, TTC Hotel Premium, Holiday Villa... Tất cả đều được trang bị 
+                    hiện đại, sang trọng với view nhìn ra biển tuyệt đẹp.
+                </p>
+
+                <h3>💡 Thông Tin Hữu Ích</h3>
+                <p>
+                    <strong>Thời gian lý tưởng:</strong> Từ tháng 4 đến tháng 10, thời tiết mát mẻ, 
+                    ít mưa, thích hợp cho các hoạt động ngoài trời.<br>
+                    <strong>Giá vé tham quan:</strong> Miễn phí vào đảo, chỉ tính phí các dịch vụ 
+                    giải trí cụ thể.<br>
+                    <strong>Đi lại:</strong> Có thể đi taxi, xe bus, hoặc thuê xe máy từ trung tâm Hạ Long.
+                </p>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Facebook Posts -->
+                <div class="sidebar-section">
+                    <h3>📰 Bài Viết Liên Quan</h3>
+                    <div class="fb-plugin">
+                        <!-- Facebook Page Plugin -->
+                        <div id="fb-root"></div>
+                        <script async defer crossorigin="anonymous" 
+                                src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"></script>
+                        
+                        <div class="fb-page" 
+                             data-href="https://www.facebook.com/QuangNinhTourism" 
+                             data-tabs="timeline" 
+                             data-width="360" 
+                             data-height="500" 
+                             data-small-header="false" 
+                             data-adapt-container-width="true" 
+                             data-hide-cover="false" 
+                             data-show-facepile="false">
+                            <blockquote cite="https://www.facebook.com/QuangNinhTourism" 
+                                        class="fb-xfbml-parse-ignore">
+                                <div class="fb-loading">Đang tải bài viết từ Facebook...</div>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.9em; color: #666;">
+                        💬 Theo dõi fanpage Du lịch Quảng Ninh để cập nhật thông tin mới nhất
+                    </p>
+                </div>
+
+                <!-- Google Map -->
+                <div class="sidebar-section">
+                    <h3>🗺️ Vị Trí - UBND Phường Tuần Châu</h3>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.3925789363756!2d107.04619931493756!3d20.867446494975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a58e6bb23cde7%3A0x8d6e8e3e9e8c8d8e!2zVUJORCBQaMaw4budbmcgVHXhuqduIENow6J1!5e0!3m2!1svi!2s!4v1234567890123!5m2!1svi!2s" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.9em; color: #666;">
+                        📍 Địa chỉ: Phường Tuần Châu, TP. Hạ Long, Quảng Ninh
+                    </p>
+                </div>
+
+                <!-- Quick Info -->
+                <div class="sidebar-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <h3 style="color: white; border-bottom-color: white;">⚡ Thông Tin Nhanh</h3>
+                    <p><strong>☎️ Hotline:</strong> 1900-xxxx</p>
+                    <p><strong>🕐 Giờ mở cửa:</strong> 24/7</p>
+                    <p><strong>💰 Giá vé:</strong> Miễn phí vào đảo</p>
+                    <p><strong>🚗 Cách trung tâm:</strong> 2km</p>
+                    <p><strong>⭐ Đánh giá:</strong> 4.5/5 ⭐⭐⭐⭐</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script>
+        // Fallback if Facebook plugin doesn't load
+        setTimeout(function() {
+            var fbPlugin = document.querySelector('.fb-page');
+            if (fbPlugin && !fbPlugin.querySelector('iframe')) {
+                console.log('Facebook plugin may be blocked or slow to load');
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

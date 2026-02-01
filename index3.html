@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch Tuần Châu | Quảng Ninh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Container với Video bên trái trên cùng */
+        .container {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Video Section - Góc trên bên trái */
+        .video-section {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .video-wrapper {
+            width: 500px;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 281px;
+            border: none;
+            display: block;
+        }
+
+        .video-title {
+            background: #667eea;
+            color: white;
+            padding: 12px 15px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+            clear: both;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .main-content h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .main-content h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .main-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.05em;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-section h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        /* Facebook Plugin */
+        .fb-plugin {
+            height: 500px;
+            overflow: hidden;
+        }
+
+        /* Google Map */
+        .map-container {
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Highlights */
+        .highlights {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .highlights h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .highlights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .highlights li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .highlights li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-wrapper {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .video-wrapper {
+                width: 100%;
+            }
+
+            .video-wrapper iframe {
+                height: 200px;
+            }
+        }
+
+        /* Loading effect for Facebook */
+        .fb-loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>🏝️ Khám Phá Tuần Châu</h1>
+            <p>Hòn đảo du lịch đẳng cấp bậc nhất Việt Nam</p>
+        </div>
+    </header>
+
+<!-- Main Container -->
+<div class="container">
+    <!-- Video Section - Góc trên bên trái -->
+    <div class="video-section clearfix">
+        <div class="video-wrapper">
+            <div class="video-title">
+                🎬 Video Giới Thiệu Chùa Lôi Âm
+            </div>
+            <iframe 
+                src="https://www.youtube.com/embed/L2FDm7qhqRc?autoplay=0&mute=0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <!-- Text bên cạnh video -->
+        <div style="overflow: hidden;">
+            <h2 style="color: #667eea; font-size: 1.8em; margin-bottom: 15px;">
+                Chào Mừng Đến Với Chùa Lôi Âm
+            </h2>
+            <p style="font-size: 1.05em; line-height: 1.8; text-align: justify;">
+                Chùa Lôi Âm là một ngôi chùa linh thiêng nằm tại phường Tuần Châu, thành phố Hạ Long, 
+                tỉnh Quảng Ninh. Với không gian tôn nghiêm và thiêng liêng, chùa Lôi Âm là nơi 
+                thờ phụng quan trọng của người dân địa phương và là điểm tham quan tâm linh 
+                thu hút nhiều du khách thập phương.
+            </p>
+            <p style="font-size: 1.05em; line-height: 1.8; text-align: justify; margin-top: 10px;">
+                Ngôi chùa không chỉ mang giá trị tâm linh cao mà còn là nơi lưu giữ những nét 
+                văn hóa truyền thống đặc sắc của vùng đất Quảng Ninh, tạo nên một không gian 
+                thanh tịnh giữa lòng thành phố du lịch sôi động.
+            </p>
+        </div>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="content-grid">
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>Chùa Lôi Âm - Tâm Linh Thiêng Liêng Tại Tuần Châu</h2>
+            
+            <p>
+                Chùa Lôi Âm là một trong những ngôi chùa nổi tiếng tại phường Tuần Châu, thành phố 
+                Hạ Long, tỉnh Quảng Ninh. Ngôi chùa được xây dựng theo lối kiến trúc truyền thống 
+                Việt Nam, tọa lạc trong không gian yên tĩnh, mang đến cảm giác thanh tịnh và 
+                tĩnh lặng cho những ai đến thăm và thờ phụng.
+            </p>
+
+            <div class="image-gallery">
+                <img src="https://static.vinwonders.com/production/chua-loi-am-thumb.jpg" alt="Chùa Lôi Âm 1">
+                <img src="https://image.vietnamnews.vn/uploadvnnews/Article/2022/12/8/255369_go.jpg" alt="Chùa Lôi Âm 2">
+                <img src="https://danatravel.vn/data/images/2c-min(10).png" alt="Chùa Lôi Âm 3">
+            </div>
+
+            <div class="highlights">
+                <h3>🌟 Điểm Nổi Bật</h3>
+                <ul>
+                    <li>Kiến trúc cổ kính, trang nghiêm</li>
+                    <li>Không gian yên tĩnh, thanh tịnh</li>
+                    <li>Vị trí thuận lợi tại Tuần Châu</li>
+                    <li>Nơi thờ phụng linh thiêng</li>
+                    <li>Các lễ hội Phật giáo truyền thống</li>
+                    <li>Điểm tham quan tâm linh ý nghĩa</li>
+                </ul>
+            </div>
+
+            <h3>📍 Vị Trí Địa Lý</h3>
+            <p>
+                Chùa Lôi Âm tọa lạc tại phường Tuần Châu, thành phố Hạ Long, tỉnh Quảng Ninh. 
+                Ngôi chùa có vị trí thuận lợi, dễ dàng tiếp cận từ trung tâm thành phố Hạ Long 
+                cũng như từ các khu vực du lịch khác trong vùng. Việc di chuyển đến chùa rất 
+                thuận tiện bằng các phương tiện giao thông công cộng hoặc phương tiện cá nhân.
+            </p>
+
+            <h3>🏛️ Kiến Trúc và Không Gian</h3>
+            <p>
+                <strong>Kiến trúc truyền thống:</strong> Chùa Lôi Âm được xây dựng theo lối 
+                kiến trúc chùa Việt truyền thống với những đường nét cong vút đặc trưng, mái 
+                ngói âm dương, các hoa văn trang trí tinh xảo được chạm khắc tỉ mỉ.
+            </p>
+
+            <p>
+                <strong>Chánh điện:</strong> Là nơi thờ chính của chùa, được thiết kế trang nghiêm 
+                với các bức tượng Phật được tạc công phu, bàn thờ được bố trí trang trọng theo 
+                đúng nghi lễ Phật giáo.
+            </p>
+
+            <p>
+                <strong>Sân chùa và khuôn viên:</strong> Khu vực xung quanh chùa được thiết kế 
+                với không gian xanh mát, có các loại cây cảnh, tạo nên không khí trong lành và 
+                yên tĩnh, thích hợp cho việc tham thiền và tu tập.
+            </p>
+
+            <h3>🙏 Hoạt Động Tâm Linh</h3>
+            <p>
+                <strong>Lễ Phật hàng ngày:</strong> Chùa tổ chức các buổi lễ Phật vào sáng sớm 
+                và chiều tối, thu hút nhiều Phật tử và du khách đến tham dự để cầu bình an, 
+                sức khỏe và may mắn.
+            </p>
+
+            <p>
+                <strong>Các dịp lễ lớn:</strong> Trong các ngày lễ Phật giáo quan trọng như 
+                Phật Đản, Vu Lan, Tết Nguyên đán, chùa tổ chức các lễ hội với quy mô lớn, 
+                thu hút đông đảo Phật tử và người dân tham gia.
+            </p>
+
+            <p>
+                <strong>Thiền định và tu tập:</strong> Chùa cung cấp không gian yên tĩnh cho 
+                những ai muốn tham thiền, tu tập, tìm hiểu về Phật pháp và rèn luyện tâm hồn.
+            </p>
+
+            <h3>🌸 Ý Nghĩa Văn Hóa</h3>
+            <p>
+                Chùa Lôi Âm không chỉ là nơi thờ phụng mà còn là trung tâm văn hóa tâm linh 
+                quan trọng của cộng đồng. Ngôi chùa góp phần bảo tồn và phát huy các giá trị 
+                văn hóa truyền thống, là nơi giáo dục đạo đức, lối sống tốt đẹp cho cộng đồng.
+            </p>
+
+            <h3>🎋 Lễ Hội Truyền Thống</h3>
+            <p>
+                <strong>Lễ Phật Đản:</strong> Tổ chức long trọng vào ngày sinh của Đức Phật, 
+                với các nghi thức truyền thống như rước Phật, cúng dường, và các hoạt động 
+                từ thiện ý nghĩa.<br>
+                <strong>Lễ Vu Lan:</strong> Ngày báo hiếu, tôn vinh cha mẹ với nhiều hoạt động 
+                thiện nguyện và tri ân.<br>
+                <strong>Lễ cầu an đầu năm:</strong> Thu hút đông đảo người dân đến cầu may mắn, 
+                bình an cho năm mới.
+            </p>
+
+            <h3>💡 Thông Tin Tham Quan</h3>
+            <p>
+                <strong>Giờ mở cửa:</strong> Từ 5:00 sáng đến 21:00 tối hàng ngày<br>
+                <strong>Lễ Phật:</strong> 5:30 sáng và 18:00 chiều<br>
+                <strong>Phí tham quan:</strong> Miễn phí (có thể đóng góp công đức tự nguyện)<br>
+                <strong>Trang phục:</strong> Nên mặc trang phục lịch sự, trang nghiêm khi vào chùa<br>
+                <strong>Quy tắc:</strong> Giữ yên lặng, tôn trọng không gian thiêng liêng
+            </p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+                <!-- Chùa Lôi Âm Posts -->
+    <div class="sidebar-section">
+        <h3>📿 Bài Viết Liên Quan Chùa Lôi Âm</h3>
+        <div class="fb-plugin">
+            <!-- Facebook Page Plugin -->
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" 
+                    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"></script>
+            
+            <div class="fb-page" 
+                 data-href="https://www.facebook.com/ChuaLoiAm" 
+                 data-tabs="timeline" 
+                 data-width="360" 
+                 data-height="500" 
+                 data-small-header="false" 
+                 data-adapt-container-width="true" 
+                 data-hide-cover="false" 
+                 data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/ChuaLoiAm" 
+                            class="fb-xfbml-parse-ignore">
+                    <div class="fb-loading">Đang tải bài viết từ Facebook...</div>
+                </blockquote>
+            </div>
+        </div>
+        <p style="margin-top: 15px; font-size: 0.9em; color: #666;">
+            💬 Theo dõi fanpage Chùa Lôi Âm để cập nhật thông tin tâm linh mới nhất
+        </p>
+    </div>
+
+            <!-- Google Map -->
+            <div class="sidebar-section">
+                <h3>🗺️ Vị Trí - Chùa Lôi Âm</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.3925789363756!2d107.04619931493756!3d20.867446494975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a58e6bb23cde7%3A0x8d6e8e3e9e8c8d8e!2zQ2jDuWEgTMO0aSBBbQ!5e0!3m2!1svi!2s!4v1234567890123!5m2!1svi!2s" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9em; color: #666;">
+                    📍 Địa chỉ: Phường Tuần Châu, TP. Hạ Long, Quảng Ninh
+                </p>
+            </div>
+
+            <!-- Quick Info -->
+            <div class="sidebar-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h3 style="color: white; border-bottom-color: white;">⚡ Thông Tin Nhanh</h3>
+                <p><strong>🙏 Lễ Phật:</strong> 5:30 - 18:00</p>
+                <p><strong>🕐 Giờ mở cửa:</strong> 5:00 - 21:00</p>
+                <p><strong>💰 Phí tham quan:</strong> Miễn phí</p>
+                <p><strong>🚗 Giao thông:</strong> Thuận lợi</p>
+                <p><strong>⭐ Đánh giá:</strong> 4.7/5 ⭐⭐⭐⭐⭐</p>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<script>
+    // Fallback if Facebook plugin doesn't load
+    setTimeout(function() {
+        var fbPlugin = document.querySelector('.fb-page');
+        if (fbPlugin && !fbPlugin.querySelector('iframe')) {
+            console.log('Facebook plugin may be blocked or slow to load');
+        }
+    }, 5000);
+</script>
+</body>
+</html>
