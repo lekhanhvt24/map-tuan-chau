@@ -1,0 +1,157 @@
+{
+  "header": {
+    "title": "🏝️ Chùa Lôi Âm Tuần Châu",
+    "subtitle": "Không gian tâm linh thanh tịnh giữa lòng Hạ Long"
+  },
+  "video": {
+    "title": "🎬 Video Giới Thiệu Chùa Lôi Âm",
+    "url": "https://www.youtube.com/embed/L2FDm7qhqRc?autoplay=0&mute=0",
+    "description": [
+      "Chùa Lôi Âm là một ngôi chùa linh thiêng nằm tại phường Tuần Châu, thành phố Hạ Long, tỉnh Quảng Ninh. Với không gian tôn nghiêm và thiêng liêng, chùa là nơi thờ phụng quan trọng của người dân địa phương và là điểm tham quan tâm linh thu hút nhiều du khách thập phương.",
+      "Ngôi chùa không chỉ mang giá trị tâm linh cao mà còn là nơi lưu giữ những nét văn hóa truyền thống đặc sắc của vùng đất Quảng Ninh, tạo nên một không gian thanh tịnh giữa lòng thành phố du lịch sôi động."
+    ]
+  },
+  "mainContent": {
+    "title": "Chùa Lôi Âm - Tâm Linh Thiêng Liêng Tại Tuần Châu",
+    "introduction": "Chùa Lôi Âm là một trong những ngôi chùa nổi tiếng tại phường Tuần Châu, thành phố Hạ Long, tỉnh Quảng Ninh. Ngôi chùa được xây dựng theo lối kiến trúc truyền thống Việt Nam, tọa lạc trong không gian yên tĩnh, mang đến cảm giác thanh tịnh và tĩnh lặng cho những ai đến thăm và thờ phụng.",
+    "gallery": [
+      {
+        "url": "https://static.vinwonders.com/production/chua-loi-am-thumb.jpg",
+        "alt": "Chùa Lôi Âm 1"
+      },
+      {
+        "url": "https://image.vietnamnews.vn/uploadvnnews/Article/2022/12/8/255369_go.jpg",
+        "alt": "Chùa Lôi Âm 2"
+      },
+      {
+        "url": "https://danatravel.vn/data/images/2c-min(10).png",
+        "alt": "Chùa Lôi Âm 3"
+      }
+    ],
+    "highlights": {
+      "title": "🌟 Điểm Nổi Bật",
+      "items": [
+        "Kiến trúc cổ kính, trang nghiêm",
+        "Không gian yên tĩnh, thanh tịnh",
+        "Vị trí thuận lợi tại Tuần Châu",
+        "Nơi thờ phụng linh thiêng",
+        "Các lễ hội Phật giáo truyền thống",
+        "Điểm tham quan tâm linh ý nghĩa"
+      ]
+    },
+    "sections": [
+      {
+        "icon": "📍",
+        "title": "Vị Trí Địa Lý",
+        "content": "Chùa Lôi Âm tọa lạc tại phường Tuần Châu, thành phố Hạ Long, tỉnh Quảng Ninh. Ngôi chùa có vị trí thuận lợi, dễ dàng tiếp cận từ trung tâm thành phố Hạ Long cũng như từ các khu vực du lịch khác trong vùng."
+      },
+      {
+        "icon": "🏛️",
+        "title": "Kiến Trúc và Không Gian",
+        "content": [
+          {
+            "subtitle": "Kiến trúc truyền thống:",
+            "text": "Chùa Lôi Âm được xây dựng theo lối kiến trúc chùa Việt truyền thống với những đường nét cong vút đặc trưng, mái ngói âm dương, hoa văn trang trí tinh xảo."
+          },
+          {
+            "subtitle": "Chánh điện:",
+            "text": "Là nơi thờ chính của chùa, được thiết kế trang nghiêm với các bức tượng Phật được tạc công phu, bàn thờ được bố trí trang trọng."
+          },
+          {
+            "subtitle": "Sân chùa và khuôn viên:",
+            "text": "Không gian xanh mát với cây cảnh và bầu không khí trong lành, thích hợp cho tham thiền và tu tập."
+          }
+        ]
+      },
+      {
+        "icon": "🙏",
+        "title": "Hoạt Động Tâm Linh",
+        "content": [
+          {
+            "subtitle": "Lễ Phật hàng ngày:",
+            "text": "Chùa tổ chức lễ Phật vào sáng sớm và chiều tối, thu hút nhiều Phật tử và du khách đến cầu bình an."
+          },
+          {
+            "subtitle": "Các dịp lễ lớn:",
+            "text": "Trong các ngày lễ Phật giáo như Phật Đản, Vu Lan, Tết Nguyên Đán, chùa tổ chức các lễ hội lớn với đông đảo người tham dự."
+          },
+          {
+            "subtitle": "Thiền định và tu tập:",
+            "text": "Không gian yên tĩnh giúp du khách tham thiền, tìm hiểu Phật pháp và rèn luyện tâm hồn."
+          }
+        ]
+      },
+      {
+        "icon": "🌸",
+        "title": "Ý Nghĩa Văn Hóa",
+        "content": "Chùa Lôi Âm không chỉ là nơi thờ phụng mà còn là trung tâm văn hóa tâm linh quan trọng, góp phần bảo tồn và phát huy giá trị văn hóa truyền thống của địa phương."
+      },
+      {
+        "icon": "🎋",
+        "title": "Lễ Hội Truyền Thống",
+        "content": [
+          {
+            "subtitle": "Lễ Phật Đản:",
+            "text": "Tổ chức long trọng với nghi thức rước Phật, cúng dường và hoạt động từ thiện."
+          },
+          {
+            "subtitle": "Lễ Vu Lan:",
+            "text": "Ngày báo hiếu, tôn vinh cha mẹ với nhiều hoạt động thiện nguyện."
+          },
+          {
+            "subtitle": "Lễ cầu an đầu năm:",
+            "text": "Người dân đến cầu bình an, may mắn cho năm mới."
+          }
+        ]
+      },
+      {
+        "icon": "💡",
+        "title": "Thông Tin Tham Quan",
+        "content": [
+          {
+            "label": "Giờ mở cửa:",
+            "text": "5:00 – 21:00 hàng ngày"
+          },
+          {
+            "label": "Lễ Phật:",
+            "text": "5:30 sáng và 18:00 chiều"
+          },
+          {
+            "label": "Phí tham quan:",
+            "text": "Miễn phí (có thể đóng góp công đức tự nguyện)"
+          },
+          {
+            "label": "Trang phục:",
+            "text": "Nên mặc trang phục lịch sự, trang nghiêm"
+          },
+          {
+            "label": "Quy tắc:",
+            "text": "Giữ yên lặng, tôn trọng không gian thiêng liêng"
+          }
+        ]
+      }
+    ]
+  },
+  "sidebar": {
+    "facebook": {
+      "title": "📿 Bài Viết Liên Quan Chùa Lôi Âm",
+      "pageUrl": "https://www.facebook.com/ChuaLoiAm",
+      "note": "💬 Theo dõi fanpage Chùa Lôi Âm để cập nhật thông tin tâm linh mới nhất"
+    },
+    "map": {
+      "title": "🗺️ Vị Trí - Chùa Lôi Âm",
+      "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.3925789363756!2d107.04619931493756!3d20.867446494975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a58e6bb23cde7%3A0x8d6e8e3e9e8c8d8e!2zQ2jDuWEgTMO0aSBBbQ!5e0!3m2!1svi!2s!4v1234567890123!5m2!1svi!2s",
+      "address": "📍 Địa chỉ: Phường Tuần Châu, TP. Hạ Long, Quảng Ninh"
+    },
+    "quickInfo": {
+      "title": "⚡ Thông Tin Nhanh",
+      "items": [
+        { "icon": "🙏", "label": "Lễ Phật:", "value": "5:30 - 18:00" },
+        { "icon": "🕐", "label": "Giờ mở cửa:", "value": "5:00 - 21:00" },
+        { "icon": "💰", "label": "Phí tham quan:", "value": "Miễn phí" },
+        { "icon": "🚗", "label": "Giao thông:", "value": "Thuận lợi" },
+        { "icon": "⭐", "label": "Đánh giá:", "value": "4.7/5 ⭐⭐⭐⭐⭐" }
+      ]
+    }
+  }
+}

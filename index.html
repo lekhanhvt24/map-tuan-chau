@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +24,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .header-content {
@@ -62,7 +63,7 @@
             margin-bottom: 20px;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
 
         .video-wrapper iframe {
@@ -93,7 +94,7 @@
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
 
         .main-content h2 {
@@ -129,7 +130,7 @@
             height: 200px;
             object-fit: cover;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
 
@@ -148,7 +149,7 @@
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar-section h3 {
@@ -170,7 +171,7 @@
             height: 400px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .map-container iframe {
@@ -259,14 +260,35 @@
             padding: 40px;
             color: #666;
         }
+
+        .buttons {
+      margin-bottom: 15px;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="header-content">
             <h1 id="headerTitle"></h1>
             <p id="headerSubtitle"></p>
+        </div>
+        <div class="buttons" style="text-align: center; margin-top: 10px;">
+            <button onclick="loadData('daoTuanChau')">Đảo Tuần Châu</button>
+            <button onclick="loadData('chuaLoiAm')">Chùa Lôi Âm</button>
+            <button onclick="loadData(3)">Data 3</button>
+            <button onclick="loadData(4)">Data 4</button>
+            <button onclick="loadData(5)">Data 5</button>
+            <button onclick="loadData(6)">Data 6</button>
+            <button onclick="loadData(7)">Data 7</button>
+            <button onclick="loadData(8)">Data 8</button>
+            <button onclick="loadData(9)">Data 9</button>
         </div>
     </header>
 
@@ -276,9 +298,11 @@
         <div class="video-section clearfix">
             <div class="video-wrapper">
                 <div class="video-title" id="videoTitle"></div>
-                <iframe id="videoFrame" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="videoFrame"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
-            
+
             <div style="overflow: hidden;">
                 <h2 style="color: #667eea; font-size: 1.8em; margin-bottom: 15px;">
                     Chào Mừng Đến Với Tuần Châu
@@ -293,7 +317,7 @@
             <main class="main-content">
                 <h2 id="mainTitle"></h2>
                 <p id="introduction"></p>
-                
+
                 <div class="image-gallery" id="gallery"></div>
 
                 <div class="highlights">
@@ -311,18 +335,12 @@
                     <h3 id="facebookTitle"></h3>
                     <div class="fb-plugin">
                         <div id="fb-root"></div>
-                        <script async defer crossorigin="anonymous" 
-                                src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"></script>
-                        
-                        <div class="fb-page" 
-                             id="fbPage"
-                             data-tabs="timeline" 
-                             data-width="360" 
-                             data-height="500" 
-                             data-small-header="false" 
-                             data-adapt-container-width="true" 
-                             data-hide-cover="false" 
-                             data-show-facepile="false">
+                        <script async defer crossorigin="anonymous"
+                            src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"></script>
+
+                        <div class="fb-page" id="fbPage" data-tabs="timeline" data-width="360" data-height="500"
+                            data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                            data-show-facepile="false">
                             <blockquote class="fb-xfbml-parse-ignore">
                                 <div class="fb-loading">Đang tải bài viết từ Facebook...</div>
                             </blockquote>
@@ -335,13 +353,15 @@
                 <div class="sidebar-section">
                     <h3 id="mapTitle"></h3>
                     <div class="map-container">
-                        <iframe id="mapFrame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe id="mapFrame" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <p id="mapAddress" style="margin-top: 15px; font-size: 0.9em; color: #666;"></p>
                 </div>
 
                 <!-- Quick Info -->
-                <div class="sidebar-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <div class="sidebar-section"
+                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
                     <h3 id="quickInfoTitle" style="color: white; border-bottom-color: white;"></h3>
                     <div id="quickInfoList"></div>
                 </div>
@@ -351,7 +371,10 @@
 
     <script>
         // Load JSON data
-        fetch('data.json')
+            function loadData(diaDiem) {
+      const fileName = `${diaDiem}.json`;
+
+        fetch(fileName)
             .then(response => response.json())
             .then(data => {
                 // Header
@@ -361,7 +384,7 @@
                 // Video
                 document.getElementById('videoTitle').textContent = data.video.title;
                 document.getElementById('videoFrame').src = data.video.url;
-                
+
                 let videoDescHTML = '';
                 data.video.description.forEach(desc => {
                     videoDescHTML += `<p style="font-size: 1.05em; line-height: 1.8; text-align: justify;">${desc}</p>`;
@@ -391,7 +414,7 @@
                 let sectionsHTML = '';
                 data.mainContent.sections.forEach(section => {
                     sectionsHTML += `<h3>${section.icon} ${section.title}</h3>`;
-                    
+
                     if (typeof section.content === 'string') {
                         sectionsHTML += `<p>${section.content}</p>`;
                     } else if (Array.isArray(section.content)) {
@@ -428,7 +451,14 @@
                 if (window.FB) {
                     window.FB.XFBML.parse();
                 }
-            })
-            </script>
+            });
+        }    
+
+    // 🔥 Tự động load data1 khi vừa mở trang
+    window.onload = function () {
+      loadData('daoTuanChau');
+    };
+    </script>
 </body>
+
 </html>
